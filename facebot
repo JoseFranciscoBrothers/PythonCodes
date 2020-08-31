@@ -1,0 +1,48 @@
+from selenium import webdriver
+
+
+
+import time
+
+driver = webdriver.Chrome(executable_path=r"C:\Users\pupat\OneDrive\Escritorio\Programación\webdriver\chromedriver.exe")
+usr = 'pupatbros@gmail.com'
+pw = 'sopimus2'
+
+class InstaBot:
+    def __init__(self,driver):
+        self.driver = driver
+        self.driver.get("https://www.facebook.com/")
+        time.sleep(2)
+        self.driver.find_elements_by_xpath("//*[@id='email']")[0]\
+        .send_keys('santiaguitovalderrama69@gmail.com')
+        time.sleep(2)
+        self.driver.find_elements_by_xpath("//*[@id='pass']")[0]\
+        .send_keys('furrito5000')
+        time.sleep(2)       
+        self.driver.find_elements_by_xpath("//*[@id='u_0_b']")[0].click()
+        time.sleep(5) 
+        self.driver.get("https://www.facebook.com/estefania.brothersradilla.3/")
+        time.sleep(2)
+        
+        
+        self.driver.find_elements_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]")[0].click()
+        time.sleep(1)
+        self.driver.find_elements_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[2]/div")[0].click()
+        time.sleep(1)
+        self.driver.find_elements_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[2]/input")[0]\
+        .send_keys('estefania')
+        time.sleep(3)
+        self.driver.find_elements_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/div[3]/div[2]/div/a[1]/div/div[2]/div/span')[0].click()
+        time.sleep(4)
+        
+        
+        self.driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/header/div/div')[0].click()
+        time.sleep(1)
+        self.driver.find_elements_by_xpath('//*[@id="react-root"]/section/div/div/section/div[2]/div[3]/div/div/div[1]/div/textarea')[0]\
+        .send_keys('xd')
+        self.driver.find_elements_by_xpath('//*[@id="react-root"]/section/div/div/section/div[2]/div[3]/div/div/div[2]/div')[0].click()
+        time.sleep(1)
+        #driver.close()
+  
+InstaBot(driver)
+#/section/div/div/section/div[2]/div[3]/div/div/div[2]/div    
